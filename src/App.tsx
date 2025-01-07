@@ -6,6 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Login from "./pages/auth/Login";
+import Landing from "./pages/landingpage/Landing";
 
 
 
@@ -18,9 +19,15 @@ import Login from "./pages/auth/Login";
 
 const router = createBrowserRouter([
 
- 
+
   {
     path: "/",
+    element: <Landing />,
+  },
+
+ 
+  {
+    path: "/login",
     element: <Login />,
   },
 

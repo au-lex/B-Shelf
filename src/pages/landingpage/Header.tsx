@@ -1,0 +1,120 @@
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+
+interface NavItem {
+  label: string;
+  path: string;
+}
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItems: NavItem[] = [
+    { label: 'Home', path: '/' },
+    { label: 'About Us', path: '/about' },
+    { label: 'Author', path: '/author' },
+    { label: 'Chapter', path: '/chapter' },
+    { label: 'Blog', path: '/blog' },
+    // { label: 'Shop', path: '/shop' },
+    { label: 'Contact', path: '/contact' },
+  ];
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <header className="w-full bg-white shadow-sm relative z-50 fixed">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-[4rem]">
+          {/* Logo */}
+          <div className="">
+            <NavLink to="/" className="b block">
+              <img src="https://res.cloudinary.com/dmhvsyzch/image/upload/v1736278991/image_prev_ui_1_n8hq0y.png"
+               alt="logo" className='w-[150px] h-[50px] object-cover' />
+            </NavLink>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.label}
+                to={item.path}
+                className={({ isActive }) => 
+                  `px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive 
+                      ? 'text-blue-500 font-semibold'
+                      : 'text-gray-600 hover:text-blue-500'
+                  }`
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <NavLink
+              to="/buy"
+              className="bg-blue-500 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-600 transition-colors"
+            >
+              Signup
+            </NavLink>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-500 hover:bg-gray-100 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed inset-0 mt-[4rem] bg-white transform z-50 transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex flex-col h-full pt-20 px-4 bg-white">
+          {navItems.map((item, index) => (
+            <NavLink
+              key={item.label}
+              to={item.path}
+              onClick={toggleMenu}
+              className={({ isActive }) => 
+                `px-4 py-3 text-lg font-medium transition-colors border-b border-gray-100
+                ${isActive ? 'text-[#f56256] font-semibold' : 'text-gray-600'}
+                transform transition-transform duration-300 ease-in-out
+                ${isMenuOpen ? 'translate-x-0' : 'translate-x-8'}
+                `
+              }
+              style={{
+                transitionDelay: `${index * 50}ms`
+              }}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+          <NavLink
+            to="/buy"
+            onClick={toggleMenu}
+            className="mt-6 bg-[#f56256] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-600 transition-colors text-center"
+          >
+          Signup
+          </NavLink>
+        </div>
+      </div>
+
+      
+    </header>
+  );
+};
+
+export default Header;
