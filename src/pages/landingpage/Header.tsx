@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import {  X } from 'lucide-react';
+import { VscMenu } from "react-icons/vsc";
+
 
 interface NavItem {
   label: string;
@@ -25,14 +27,14 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="w-full bg-white shadow-sm relative z-50 fixed">
+    <header className="w-full bg-white shadow-sm  z-50 fixed">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[4rem]">
           {/* Logo */}
           <div className="">
             <NavLink to="/" className="b block">
-              <img src="https://res.cloudinary.com/dmhvsyzch/image/upload/v1736278991/image_prev_ui_1_n8hq0y.png"
-               alt="logo" className='w-[150px] h-[50px] object-cover' />
+              <img src="https://res.cloudinary.com/dmhvsyzch/image/upload/v1736312874/image_prev_ui_2_d4zqol.png"
+               alt="logo" className='w-[100px] h-[90px] object-cover' />
             </NavLink>
           </div>
 
@@ -71,7 +73,7 @@ const Header: React.FC = () => {
             className="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-500 hover:bg-gray-100 transition-colors"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={24} /> : <VscMenu size={24} />}
           </button>
         </div>
       </div>
@@ -82,7 +84,7 @@ const Header: React.FC = () => {
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col h-full pt-20 px-4 bg-white">
+        <div className="flex flex-col h-full pt-4 border px-4 bg-white">
           {navItems.map((item, index) => (
             <NavLink
               key={item.label}
@@ -103,7 +105,7 @@ const Header: React.FC = () => {
             </NavLink>
           ))}
           <NavLink
-            to="/buy"
+            to="/signup"
             onClick={toggleMenu}
             className="mt-6 bg-[#f56256] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-600 transition-colors text-center"
           >
