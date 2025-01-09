@@ -3,6 +3,7 @@ import { BookOpen, User, Star, Heart, Share2, Download } from 'lucide-react';
 import { Book, Tab, TabId, Review } from './bookTypes';
 import Layout from '../../../components/layout/Layout';
 import BackButton from '../../../components/Backbtn';
+import Loader from '../../../components/Loader';
 
 const BookPreview: React.FC = () => {
   const [currentTab, setCurrentTab] = useState<TabId>('preview');
@@ -118,6 +119,7 @@ Nora hesitated before moving her pawn forward. She glanced up at Mrs. Elm, whose
     
 <Layout>
 
+<Loader />
 
 
     <div className="min-h-screen bg-gray-50 py-8  pt-[6rem]">
