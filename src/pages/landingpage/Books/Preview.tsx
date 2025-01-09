@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BookOpen, User, Star, Heart, Share2, Download, ChevronLeft } from 'lucide-react';
-import { Book, Tab, TabId, Review } from './types';
+import { BookOpen, User, Star, Heart, Share2, Download } from 'lucide-react';
+import { Book, Tab, TabId, Review } from './bookTypes';
 import Layout from '../../../components/layout/Layout';
 import BackButton from '../../../components/Backbtn';
 
