@@ -1,5 +1,6 @@
 import React from 'react'
 import { BookOpen, User, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Books: React.FC = () => {
 
@@ -88,7 +89,7 @@ const Books: React.FC = () => {
                 alt={book.title}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-blue-600">
+              <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-base">
                 {book.genre}
               </div>
             </div>
@@ -131,9 +132,9 @@ const Books: React.FC = () => {
                     <BookOpen size={18} />
                     Read Now
                   </button>
-                  <button className="px-4 py-2 rounded-lg border-2 border-base text-base hover:bg-blue-50 transition-colors">
+                  <Link to = "/books-preview" className="px-4 py-2 rounded-lg block border-2 border-base text-base hover:bg-blue-50 transition-colors">
                     Preview
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -27,7 +27,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="w-full bg-white shadow-sm  z-50 fixed">
+    <header className="w-full bg-white shadow-sm  z-40 fixed">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[4rem]">
           {/* Logo */}
@@ -61,7 +61,7 @@ const Header: React.FC = () => {
           <div className="hidden md:block">
             <NavLink
               to="/buy"
-              className="bg-blue-500 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-600 transition-colors"
+              className="bg-base text-white px-8 py-3 rounded-full  text-sm w-full  font-medium hover:bg-base/50 transition-colors"
             >
               Signup
             </NavLink>
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-500 hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-md  text-slate-800 transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <VscMenu size={24} />}

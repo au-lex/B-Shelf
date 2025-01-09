@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Login from "./pages/auth/Login";
 import Landing from "./pages/landingpage/Landing";
+import BookPreview from "./pages/landingpage/Books/Preview";
 
 
 
@@ -30,6 +31,13 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+
+  {
+    path: "/books-preview",
+    element: <BookPreview />, // Replace 1 with the appropriate bookId value
+  },
+
+
 
 
 
