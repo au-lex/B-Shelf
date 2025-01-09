@@ -46,7 +46,7 @@ const Grow: React.FC = () => {
           <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">We help you to grow</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-balance">We help you to grow</h2>
           <div className="flex justify-center mb-4">
             <div className="flex gap-1">
               {[...Array(6)].map((_, i) => (

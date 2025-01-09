@@ -3,7 +3,7 @@ import React from 'react'
 const Hero: React.FC = () => {
   return (
     <>
-         <div className="p-4 pt-[6rem] flex lg:px-[5rem] lg:pt-[14rem] ">
+         <div className="p-4 pt-[6rem] lg:flex lg:px-[5rem] lg:pt-[14rem] ">
       <div className="max-w-4xl mx-auto">
         <p className="text-[#f56256] font-light text-[10px] tracking-[2px]">
         Where Every Book Finds a Friend....
