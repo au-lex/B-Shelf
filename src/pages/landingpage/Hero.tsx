@@ -3,7 +3,7 @@ import React from 'react'
 const Hero: React.FC = () => {
   return (
     <>
-         <div className="p-4 pt-[6rem] b">
+         <div className="p-4 pt-[6rem] flex lg:px-[5rem] lg:pt-[14rem] ">
       <div className="max-w-4xl mx-auto">
         <p className="text-[#f56256] font-light text-[10px] tracking-[2px]">
         Where Every Book Finds a Friend....
@@ -19,17 +19,19 @@ const Hero: React.FC = () => {
         <button className="bg-[#f56256] text-white px-6 py-3 rounded-lg font-medium hover:bg-rose-600 transition-colors">
          Explore Now
         </button>
-        <button className="border-2 border-[#f56256] text-rose-500 px-6 py-3 rounded-lg font-medium hover:bg-rose-50 transition-colors">
+        <button className="border-2 border-[#f56256] text-rose-500 px-6 hidden py-3 rounded-lg font-medium hover:bg-rose-50 transition-colors">
           Browse Books
         </button>
       </div>
      
       </div>
-    </div>
 
-    <figure className="img">
+      <figure className="img">
         <img src="https://bookpress.themeperch.net/html/assets/images/home/hero-1.png" alt="" />
     </figure>
+    </div>
+
+  
     </>
   )
 }

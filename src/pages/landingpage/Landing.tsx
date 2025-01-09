@@ -4,6 +4,7 @@ import Hero from './Hero'
 import Footer from './Footer'
 import Grow from './Grow'
 import Blog from './Blog/Blog'
+import Books from './Books/Books'
 
 const Landing: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Landing: React.FC = () => {
       <Header />
       <Hero/>
       <Grow/>
+      <Books/>
       <Blog/>
       <Footer />
     </div>
