@@ -8,6 +8,9 @@ import {
 import Login from "./pages/auth/Login";
 import Landing from "./pages/landingpage/Landing";
 import BookPreview from "./pages/landingpage/Books/Preview";
+import Signup from "./pages/auth/Signup";
+import OtpVerify from "./pages/auth/Otp";
+import ForgotPassword from "./pages/auth/ForgottenPwd";
 
 
 
@@ -33,8 +36,26 @@ const router = createBrowserRouter([
   },
 
   {
+    path: "/signup",
+    element: <Signup />,
+  },
+
+  {
+    path: "/otp",
+    element: <OtpVerify />,
+  },
+
+
+  {
+    path: "/forgot",
+    element: <ForgotPassword />,
+  },
+
+
+
+  {
     path: "/books-preview",
-    element: <BookPreview />, // Replace 1 with the appropriate bookId value
+    element: <BookPreview />, 
   },
 
 
