@@ -15,8 +15,8 @@ const Header: React.FC = () => {
   const navItems: NavItem[] = [
     { label: 'Home', path: '/' },
     { label: 'About Us', path: '/about' },
-    { label: 'Author', path: '/author' },
-    { label: 'Chapter', path: '/chapter' },
+    { label: 'Contribute', path: '/contribute' },
+    { label: 'Connect', path: '/connect' },
     { label: 'Blog', path: '/blog' },
     // { label: 'Shop', path: '/shop' },
     { label: 'Contact', path: '/contact' },
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="w-full bg-white shadow-sm  z-40 fixed">
+    <header className="w-full bg-white shadow-sm  z-50 fixed">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[4rem]">
           {/* Logo */}

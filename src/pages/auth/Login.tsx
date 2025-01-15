@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Loader from "../../components/Loader";
 
 const Login: React.FC = () => {
@@ -65,12 +65,12 @@ const Login: React.FC = () => {
               Forgot password?
             </a>
           </div>
-          <button
-            type="submit"
-            className="w-full bg-base text-white py-2 rounded-lg hover:bg-base/30 transition"
+          <Link to ="/user"
+          
+            className="w-full bg-base text-white py-2 flex justify-center rounded-lg hover:bg-base/30 transition"
           >
             Login
-          </button>
+          </Link>
         </form>
         <div className="text-center mt-4 text-gray-600">
           <p>

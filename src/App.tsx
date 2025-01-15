@@ -11,6 +11,7 @@ import BookPreview from "./pages/landingpage/Books/Preview";
 import Signup from "./pages/auth/Signup";
 import OtpVerify from "./pages/auth/Otp";
 import ForgotPassword from "./pages/auth/ForgottenPwd";
+import UserDashboard from "./pages/user/UserDashboard";
 
 
 
@@ -61,7 +62,10 @@ const router = createBrowserRouter([
 
 
 
-
+  {
+    path: "/user",
+    element: <UserDashboard />, 
+  },
 
 
 ]);
