@@ -13,7 +13,7 @@ interface UserLayoutProps {
 const UserLayout: React.FC<UserLayoutProps> = ({children}) => {
   return (
     <>
-       <div className="min-h-screen flex flex-col bg-[#F6FCEB]">
+       <div className="min-h-screen flex flex-col b">
       
       <UserHeader />
        <div className="flex flex-1 relative">

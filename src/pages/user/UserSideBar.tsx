@@ -2,9 +2,9 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { FiUsers, FiCalendar,  FiSettings, FiLogOut } from "react-icons/fi";
+import {  FiSettings, FiLogOut } from "react-icons/fi";
 import { GrHomeRounded } from "react-icons/gr";
-import { PiMessengerLogo } from "react-icons/pi";
+
 import { LiaBookReaderSolid } from "react-icons/lia";
 import { MdOutlineAddchart } from "react-icons/md";
 import { RiUserCommunityLine } from "react-icons/ri";
