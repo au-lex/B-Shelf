@@ -8,6 +8,16 @@ export default {
     extend: {
       colors: {
         base: "#f56256"
+      },
+
+      animation: {
+        'flow-up': 'flowUp 20s linear infinite',
+      },
+      keyframes: {
+        flowUp: {
+          '0%': { transform: 'translateY(100vh)' },
+          '100%': { transform: 'translateY(-100%)' },
+        }
       }
     },
   },
