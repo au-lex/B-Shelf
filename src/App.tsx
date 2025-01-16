@@ -12,6 +12,7 @@ import Signup from "./pages/auth/Signup";
 import OtpVerify from "./pages/auth/Otp";
 import ForgotPassword from "./pages/auth/ForgottenPwd";
 import UserDashboard from "./pages/user/UserDashboard";
+import MyShelf from "./pages/MyShelf/MyShelf";
 
 
 
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
     element: <UserDashboard />, 
   },
 
+  {
+    path: "/my-shelf",
+    element: <MyShelf />, 
+  },
 
 ]);
 
