@@ -52,7 +52,7 @@ const UserSideBar: React.FC = () => {
       </ul>
 
       {/* Mobile Navbar */}
-      <ul className="flex md:hidden fixed bottom-0 left-0  z-40 right-0 bg-input border-t-2 border-t-secondary border-gray-200 justify-around p-2">
+      <ul className="flex md:hidden fixed bottom-0 left-0 bg-white  z-40 right-0 bg-input border-t-2 border-t-secondary border-gray-200 justify-around p-2">
         {links
           .filter((link) => !link.logout)
           .map((link, index) => (
