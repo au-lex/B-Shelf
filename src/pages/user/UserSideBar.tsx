@@ -21,7 +21,7 @@ const UserSideBar: React.FC = () => {
 
     const links:link[] = [
         { name: "Home", icon: <GrHomeRounded />, path: "/user" },
-        { name: "My Shelf", icon: <LiaBookReaderSolid />, path: "/community" },
+        { name: "My Shelf", icon: <LiaBookReaderSolid />, path: "/my-shelf" },
         { name: "Connect", icon: <RiUserCommunityLine />, path: "/bookings" },
         { name: "Contribute", icon: < MdOutlineAddchart />, path: "/messages" },
         { name: "Settings", icon: <FiSettings />, path: "/settings" },

@@ -5,6 +5,7 @@
 import React from 'react'
 import UserHeader from './UserHeader'
 import Sidebar from './UserSideBar'
+import Footer from '../landingpage/Footer';
 
 interface UserLayoutProps {
   children: React.ReactNode;
@@ -27,6 +28,7 @@ const UserLayout: React.FC<UserLayoutProps> = ({children}) => {
        </main>
      </div>
     </div>
+    <Footer />
     </>
   )
 }
