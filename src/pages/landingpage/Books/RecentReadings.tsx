@@ -1,3 +1,7 @@
+
+
+
+
 import { LiaBookReaderSolid } from "react-icons/lia";
 
 
@@ -9,21 +13,21 @@ interface Book {
   imageUrl: string;
 }
 
-const BookRecommendations = () => {
+const RecentReadings = () => {
   const books: Book[] = [
     {
       id: 1,
       title: "Don't Make Me Think",
       author: "Steve Krug",
       year: "2000",
-      imageUrl: "https://res.cloudinary.com/dmhvsyzch/image/upload/v1737042739/Rectangle_12_5_pqzfkd.png"
+      imageUrl: "https://bookpress.themeperch.net/html/assets/images/index2/book-mockup1.png"
     },
     {
       id: 2,
       title: "The Design of Everyday Things",
       author: "Don Norman",
       year: "1988",
-      imageUrl: "https://res.cloudinary.com/dmhvsyzch/image/upload/v1737042750/Rectangle_12_mu1wsx.png"
+      imageUrl: "https://bookpress.themeperch.net/html/assets/images/index2/book-mockup3.png"
     },
     {
       id: 3,
@@ -57,11 +61,11 @@ const BookRecommendations = () => {
   ];
 
   return (
-    <div className="lg:max-w-4xl mx-auto px-4 py-8 bg-gray100 rounded-lg ">
+    <div className="lg:max-w-4xl mx-auto px-4 bg-slate-50 pt-2 bg-gray100 rounded-lg ">
       <div className="flex justify-between items-center mb-6">
         <div className="space-y-2">
-          <h1 className="lg:text-3xl text-xl  font-bold text-gray-800 leading-[1rem]">Good Morning</h1>
-          <h2 className="lg:text-lg text-md text-gray-600 ">Recommended for You</h2>
+         
+          <h2 className="lg:text-lg text-md text-gray-600 ">Recent Readings</h2>
         </div>
         <button className="text-gray-500 hover:text-gray-700">
           Show All
@@ -90,7 +94,7 @@ const BookRecommendations = () => {
                 <span className="ml-1">{book.year}</span>
               </div>
               <span className="flex mt-2 ">
-                <button className="bg-base w-full text-white rounded-md p-1 flex   justify-center">Read 
+                <button className="bg-base w-full text-white rounded-md p-1 flex   justify-center">Resume
                   <LiaBookReaderSolid  className="text-[1.3rem] mx-1 pt-1"/></button>
               </span>
             </div>
@@ -101,4 +105,4 @@ const BookRecommendations = () => {
   );
 };
 
-export default BookRecommendations;
+export default RecentReadings;

@@ -27,7 +27,7 @@ const UserHeader: React.FC = () => {
       
       setCurrentTime(timeString);
       setCurrentDate(dateString);
-    }, 60000);
+    }, 1000);
 
     return () => clearInterval(timer);
   }, []);
@@ -44,7 +44,7 @@ const UserHeader: React.FC = () => {
             </NavLink>
           </div>
 
-          <div className=" rounded-lg border flex space-x-2 p-2">
+          <div className=" rounded-full px-2 border flex space-x-2 p-2">
         <div className="text-[12px] text-gray-700 text-center">{currentTime}</div>
         <div className="text-[12px] text-gray-500 text-center ">{currentDate}</div>
       </div>
