@@ -3,7 +3,7 @@ import React from 'react'
 const Hero: React.FC = () => {
   return (
     <>
-         <div className="p-4 pt-[6rem] lg:flex lg:px-[5rem] z-40 relative lg:pt-[14rem] ">
+         <div className="p-4 pt-[6rem] lg:flex lg:px-[5rem] z-30 relative lg:pt-[14rem] ">
       <div className="max-w-4xl mx-auto">
         <p className="text-[#f56256] font-light text-[10px] tracking-[2px]">
         Where Every Book Finds a Friend....
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
         {[...Array(30)].map((_, index) => (
           <div
             key={index}
-            className="absolute rounded-full border border-base opacity-60 animate-flow-up"
+            className="absolute z-20 rounded-full border border-base opacity-60 animate-flow-up"
             style={{
               width: `${Math.random() * 10 + 5}px`,
               height: `${Math.random() * 10 + 5}px`,

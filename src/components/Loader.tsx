@@ -14,7 +14,7 @@ const Loader: React.FC = () => {
     },[])
   return (
     <>
-       <div className={`flex items-center  justify-center fixed inset-0 bg-white z-50 ${loading ? 'block' : 'hidden'}`}>
+       <div className={`flex items-center   justify-center fixed inset-0 bg-white z-50 ${loading ? 'block' : 'hidden'}`}>
 
 <section className="d">
 
