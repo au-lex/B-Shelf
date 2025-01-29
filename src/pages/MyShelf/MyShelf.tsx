@@ -24,8 +24,8 @@ interface BookCardProps {
 const BookCard: React.FC<BookCardProps> = ({ book }) => (
   <div className="bg-white rounded-lg shadow-md p-4 flex flex-col gap-3">
     <div className="flex gap-4">
-      <img 
-        src={book.coverUrl} 
+      <img
+        src={book.coverUrl}
         alt={book.title}
         className="w-24 h-32 object-cover rounded"
       />
@@ -37,7 +37,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => (
         <div className="mt-2 text-xs text-gray-600">
           Submission Due
           <div className={`${book.isOverdue ? 'text-red-500' : ''}`}>
-            {book.submissionDue} 
+            {book.submissionDue}
             {book.isOverdue && '(Over Due)'}
           </div>
         </div>
@@ -60,12 +60,12 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => (
 
     <div className="flex gap-2 border-2 border-base ">
       <button className={`flex-1 py-2 px-4 rounded  text-sm
-        ${book.type === 'E-BOOK' 
-          ? 'text-base ' 
+        ${book.type === 'E-BOOK'
+          ? 'text-base '
           : 'text-base font-bold'}`}>
         {book.type === 'E-BOOK' ? 'Read' : 'Return'}
       </button>
-      {book.hasAudio && ( 
+      {book.hasAudio && (
         <button className="p-2 rounded hover:bg-gray-50 ">
           <HeadphonesIcon className="w-5 h-5 text-gray-400" />
         </button>
@@ -75,7 +75,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => (
 );
 
 const HeadphonesIcon = ({ className }: { className?: string }) => (
-  <svg 
+  <svg
     className={className}
     viewBox="0 0 24 24"
     fill="none"
@@ -180,11 +180,10 @@ const MyShelf: React.FC = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`pb-4 px-1 text-sm whitespace-nowrap ${
-                  activeCategory === category
+                className={`pb-4 px-1 text-sm whitespace-nowrap ${activeCategory === category
                     ? 'border-b-2 border-orange-500 text-orange-500'
                     : 'text-gray-500 hover:text-gray-700'
-                }`}
+                  }`}
               >
                 {category}
               </button>
