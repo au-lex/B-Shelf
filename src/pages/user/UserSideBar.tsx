@@ -23,7 +23,7 @@ const UserSideBar: React.FC = () => {
         { name: "Home", icon: <GrHomeRounded />, path: "/user" },
         { name: "My Shelf", icon: <LiaBookReaderSolid />, path: "/my-shelf" },
         { name: "Connect", icon: <RiUserCommunityLine />, path: "/bookings" },
-        { name: "Contribute", icon: < MdOutlineAddchart />, path: "/messages" },
+        { name: "Contribute", icon: < MdOutlineAddchart />, path: "/contribution" },
         { name: "Settings", icon: <FiSettings />, path: "/settings" },
         { name: "Logout", icon: <FiLogOut />, path: "/logout", logout: true },
       ];
