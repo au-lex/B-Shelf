@@ -14,6 +14,7 @@ import ForgotPassword from "./pages/auth/ForgottenPwd";
 import UserDashboard from "./pages/user/UserDashboard";
 import MyShelf from "./pages/MyShelf/MyShelf";
 import Settings from "./pages/Settings/Settings";
+import Contribution from "./pages/Contribution/Contribution";
 
 
 
@@ -72,6 +73,13 @@ const router = createBrowserRouter([
   {
     path: "/my-shelf",
     element: <MyShelf />, 
+  },
+
+
+
+  {
+    path: "/contribution",
+    element: <Contribution />, 
   },
 
 
