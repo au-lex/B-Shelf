@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import UserLayout from '../user/UserLayout';
+import { HeadphonesIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Book {
   id: string;
@@ -22,13 +24,27 @@ interface BookCardProps {
 }
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => (
-  <div className="bg-white rounded-lg shadow-md p-4 flex flex-col gap-3">
-    <div className="flex gap-4">
+  <div className="bg-white rounded-lg border shadow-md p-4 flex flex-col gap-3">
+    <div className="flex gap-4 ">
+      <Link to={`/details/${book.id}`} className="bkim">
+
       <img
         src={book.coverUrl}
         alt={book.title}
-        className="w-24 h-32 object-cover rounded"
-      />
+        className="w-32 h-32 object-cover rounded"
+        />
+            <div className="flex flex-col gap-1">
+      <h3 className="text-[12px]  ">{book.title}</h3>
+      <div className="text-[10px] text-gray-600">
+        {book.author}, {book.year}
+      </div>
+      <div className="text-sm text-gray-600">
+        {book.rating}/5
+      </div>
+    </div>
+        </Link>
+
+        
       <div className="flex flex-col flex-1">
         <div className="text-xs text-gray-600">
           Borrowed on
@@ -41,24 +57,16 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => (
             {book.isOverdue && '(Over Due)'}
           </div>
         </div>
-        <div className={`mt-2 px-3 py-1 text-sm text-white rounded w-fit
+
+        <section className="bookbtn space-y-3">
+
+    
+        <div className={`mt-2 px-4 py-2 text-sm text-white text-center rounded w-full
           ${book.type === 'E-BOOK' ? 'bg-green-500' : 'bg-gray-500'}`}>
           {book.type}
         </div>
-      </div>
-    </div>
 
-    <div className="flex flex-col gap-1">
-      <h3 className="font-medium">{book.title}</h3>
-      <div className="text-sm text-gray-600">
-        {book.author}, {book.year}
-      </div>
-      <div className="text-sm text-gray-600">
-        {book.rating}/5
-      </div>
-    </div>
-
-    <div className="flex gap-2 border-2 border-base ">
+        <div className="flex gap-2 border-2 border-base  rounded-lg">
       <button className={`flex-1 py-2 px-4 rounded  text-sm
         ${book.type === 'E-BOOK'
           ? 'text-base '
@@ -71,23 +79,27 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => (
         </button>
       )}
     </div>
+    </section>
+
+      </div>
+    </div>
+
+
+
+   
   </div>
 );
 
-const HeadphonesIcon = ({ className }: { className?: string }) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
-    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
-  </svg>
-);
+
+
+
 
 const MyShelf: React.FC = () => {
+
+
+
+
+
   const categories = [
     'All Books',
     'Favourite',
@@ -191,7 +203,7 @@ const MyShelf: React.FC = () => {
           </nav>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredBooks.map(book => (
             <BookCard key={book.id} book={book} />
           ))}
