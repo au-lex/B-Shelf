@@ -1,31 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import UserLayout from '../user/UserLayout';
-import { ArrowLeft, BookOpen, Headphones } from 'lucide-react';
+import { ArrowLeft, Headphones } from 'lucide-react';
 import { MdOutlineRateReview } from "react-icons/md";
 import { TfiWrite } from "react-icons/tfi";
 import { LuShare2 } from "react-icons/lu";
 
-interface Book {
-    id: string;
-    title: string;
-    author: string;
-    year: number;
-    rating: number;
-    coverUrl: string;
-    currentlyReading: number;
-    haveRead: number;
-    edition: string;
-    publishedIn: string;
-    publisher: string;
-    language: string;
-    pages: number;
-    type: 'Borrowed' | 'E-BOOK';
-    callNumber?: string;
-}
 
 const BookDetails: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
+    useParams<{ id: string }>();
 
     const book = {
         id: '1',
