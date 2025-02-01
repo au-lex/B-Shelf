@@ -60,7 +60,7 @@ const Header: React.FC = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <NavLink
-              to="/buy"
+                  to="/signup"
               className="bg-base text-white px-8 py-3 rounded-full  text-sm w-full  font-medium hover:bg-base/50 transition-colors"
             >
               Signup
