@@ -16,6 +16,7 @@ import MyShelf from "./pages/MyShelf/MyShelf";
 import Settings from "./pages/Settings/Settings";
 import Contribution from "./pages/Contribution/Contribution";
 import BookDetails from "./pages/MyShelf/BookDetails";
+import Community from "./pages/Community/Community";
 
 
 
@@ -92,6 +93,12 @@ const router = createBrowserRouter([
     path: "/settings",
     element: <Settings />, 
   },
+
+  {
+    path: "/community",
+    element: <Community/>, 
+  },
+
 
 ]);
 
