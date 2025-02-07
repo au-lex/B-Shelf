@@ -17,6 +17,7 @@ import Settings from "./pages/Settings/Settings";
 import Contribution from "./pages/Contribution/Contribution";
 import BookDetails from "./pages/MyShelf/BookDetails";
 import Community from "./pages/Community/Community";
+import ChatPage from "./pages/Chat/Chat";
 
 
 
@@ -97,6 +98,12 @@ const router = createBrowserRouter([
   {
     path: "/community",
     element: <Community/>, 
+  },
+
+
+  {
+    path: "/chat",
+    element: <ChatPage/>, 
   },
 
 

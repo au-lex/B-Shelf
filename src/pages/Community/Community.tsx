@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import UserLayout from '../user/UserLayout';
 import { BsSendFill } from "react-icons/bs";
 
+import PostInput from './Post/PostInput';
+
 interface User {
   id: string;
   name: string;
@@ -252,25 +254,7 @@ const Community: React.FC = () => {
 
 
     <div className="max-w-4xl mx-auto p-4">
-      {/* New Post Input */}
-      <div className="mb-8 bg-white p-4 rounded-lg shadow-sm border">
-        <textarea
-          placeholder="Share your thoughts about books..."
-          className="w-full p-3 border rounded-lg mb-3 min-h-[100px]"
-        />
-        <div className="flex justify-between items-center">
-          <div className="flex gap-2">
-            <button className="p-2 text-gray-500 hover:bg-gray-100 rounded-lg">
-              📷 Add Photo
-            </button>
-          
-          </div>
-          <button className="px-6 py-2 bg-base text-white rounded-lg hover:bg-blue-600">
-            Post
-          </button>
-        </div>
-      </div>
-
+<PostInput />
       {/* Posts Feed */}
       <div>
         {posts.map(post => renderPost(post))}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { IoNotificationsOutline } from "react-icons/io5";
 import { RiChatSmile3Line } from "react-icons/ri";
 const UserHeader: React.FC = () => {
@@ -73,10 +73,10 @@ const UserHeader: React.FC = () => {
   <IoNotificationsOutline  className='text-[1.4rem] text-slate-600 '/>
         </span>
 
-        <span className="blcok">
+        <Link to ='/chat' className="blcok">
 
   <RiChatSmile3Line   className='text-[1.4rem] text-slate-600'/>
-        </span>
+        </Link>
       </section>
     </section>
     </>
