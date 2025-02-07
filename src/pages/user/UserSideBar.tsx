@@ -22,7 +22,7 @@ const UserSideBar: React.FC = () => {
     const links:link[] = [
         { name: "Home", icon: <GrHomeRounded />, path: "/user" },
         { name: "My Shelf", icon: <LiaBookReaderSolid />, path: "/my-shelf" },
-        { name: "Connect", icon: <RiUserCommunityLine />, path: "/bookings" },
+        { name: "Connect", icon: <RiUserCommunityLine />, path: "/community" },
         { name: "Contribute", icon: < MdOutlineAddchart />, path: "/contribution" },
         { name: "Settings", icon: <FiSettings />, path: "/settings" },
         { name: "Logout", icon: <FiLogOut />, path: "/logout", logout: true },
